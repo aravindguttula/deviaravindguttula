@@ -1,0 +1,262 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+  margin:0;
+  
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:48px;
+}
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size:14px;
+  color: #333333;
+}
+
+.header {
+  position:relative;
+  text-align:center;
+  background: linear-gradient(60deg,rgb(49, 230, 13) 0%, rgb(49, 230, 13) 100%);
+  color:white;
+}
+.logo {
+  width:50px;
+  fill:white;
+  padding-right:15px;
+  display:inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -120px;
+}
+
+.inner-header {
+  height:65vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+}
+.input-field{
+position: relative;
+left: 550px;bottom: 250px;
+top:-320px;
+border-style: none;
+width: fit-content;
+padding: 100px 40px 100px 40px;
+border-color: white;
+
+box-shadow:0px 0px 10px 5px rgba(0, 0, 0, .4);
+animation-name: shadow-drop-center;
+		animation-duration: 1s;
+		animation-timing-function: ease;
+		animation-delay: 0s;
+		animation-iteration-count: 1;
+		animation-direction: normal;
+		animation-fill-mode: none;
+			
+		/* shorthand
+		animation: shadow-drop-center 1s ease 0s 1 normal none;*/
+	}
+	@keyframes shadow-drop-center {
+			
+		0% {
+			box-shadow:0 0 0 0 transparent;
+		}
+		100% {
+			box-shadow:0 0 20px 0 rgba(0,0,0,.35);
+		}
+	}
+
+
+button {
+position: relative;
+left: 45px;
+top: 40px;
+padding: 10px 40px ;
+background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+border-style: none;
+border-color: aliceblue;
+box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, .5);
+border-radius: 20px;
+color:white ;
+font-weight: bold;
+font-size: 1.3em;
+		animation-name: shadow-drop-center;
+		animation-duration: 1s;
+		animation-timing-function: ease;
+		animation-delay: 0s;
+		animation-iteration-count: 1;
+		animation-direction: normal;
+		animation-fill-mode: none;
+			
+		/* shorthand
+		animation: shadow-drop-center 1s ease 0s 1 normal none;*/
+	}
+	@keyframes shadow-drop-center {
+			
+		0% {
+			box-shadow:0 0 0 0 transparent;
+		}
+		100% {
+			box-shadow:0 0 20px 0 rgba(0,0,0,.35);
+		}
+	}
+
+
+button:hover{
+  cursor: pointer;
+  
+
+}
+.input-field input{
+
+   padding: 10px 30px;
+   border-radius: 10px;
+   border-top:hidden;
+   border-left: hidden;
+   border-right: hidden;
+   border-bottom: solid;
+   border-color: rgb(52, 151, 209) ;
+  
+  
+  }
+.input-field:hover{
+
+
+  background: linear-gradient(60deg,rgb(49, 230, 13) 0%, rgb(49, 230, 13) 100%);
+
+}
+h1{
+position: relative;
+top: -120px;
+font-weight: bold;
+
+
+
+}
+h1{
+  color: white; font-weight:bold; font-size:3em;
+  
+  animation-name: focus-in-contract;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+    
+  /* shorthand
+  animation: focus-in-contract 1s ease 0s 1 normal none;*/
+}
+@keyframes focus-in-contract {
+    
+  0% {
+    letter-spacing:1em;
+    filter:blur(12px);
+    opacity:0;
+  }
+  100% {
+    filter:blur(0);
+    opacity:1;
+  }
+}
+
+
+
+
+
+
+h5{
+
+position: relative;
+bottom: -30px;
+left: 60px;
+
+
+
+}
+h5:hover{
+
+color: white;
+cursor: pointer;
+
+}
+.input-field a{
+
+        color: aliceblue;
+        text-decoration: none;
+}
+
+
+
+
